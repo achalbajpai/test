@@ -8,7 +8,6 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from textblob import TextBlob
 import pandas as pd
-import json
 from io import StringIO
 import os
 from dotenv import load_dotenv
@@ -30,22 +29,7 @@ app = FastAPI(
 )
 
 # Enable CORS with environment-specific settings
-if ENVIRONMENT == "production":
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=[FRONTEND_URL],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
-else:
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+
 
 # Security
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
