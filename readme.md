@@ -19,7 +19,7 @@ This project consists of a FastAPI backend for sentiment analysis and a React fr
 1. Create a virtual environment (recommended):
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 3. Run the FastAPI server:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 The API will be available at http://localhost:8000. You can access the API documentation at http://localhost:8000/docs.
